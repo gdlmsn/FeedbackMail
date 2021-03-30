@@ -40,4 +40,4 @@ node_modules/
 # dotenv environment variables file
 .env
 .env.test
-keys.js
+dev.js
