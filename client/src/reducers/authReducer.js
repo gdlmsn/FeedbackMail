@@ -12,7 +12,7 @@ const initialState = {
 };
 
 export function authReducer(state = initialState, action) {
-  console.log("sticzzi", action);
+  console.log("auth reducer", action);
   switch (action.type) {
     case FETCH_USER_REQUEST:
       return {

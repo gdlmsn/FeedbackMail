@@ -20,4 +20,5 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// console.log(process.env.REACT_APP_IEX_API_KEY);
+console.log('iex key is', process.env.REACT_APP_IEX_API_KEY);
+console.log('Environment is', process.env.NODE_ENV);
