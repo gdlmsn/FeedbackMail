@@ -19,3 +19,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+
+// console.log(process.env.REACT_APP_IEX_API_KEY);

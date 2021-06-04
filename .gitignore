@@ -41,3 +41,5 @@ node_modules/
 .env
 .env.test
 dev.js
+client/.env.production
+client/.env.development

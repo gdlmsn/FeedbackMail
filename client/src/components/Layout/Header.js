@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useSelector,useDispatch } from 'react-redux';
 import { Input, Menu } from 'semantic-ui-react';
-import { useSelector } from 'react-redux';
+
+
 
 export const Header = () => {
   const [activeItem, setActiveItem] = useState('home');
@@ -10,7 +12,12 @@ export const Header = () => {
   };
 
   const user = useSelector((state) => state.auth.user);
-  console.log(user);
+  // const dispatch = useDispatch();
+
+  // handleInputChange = (event) =>{
+       
+  // }
+  
   return (
     <>
       <Menu>
@@ -31,20 +38,20 @@ export const Header = () => {
         />
         <Menu.Menu position='right'>
           <Menu.Item>
-            <Input icon='search' placeholder='Search...' />
+            <Input icon='search' placeholder='Search...'/>
           </Menu.Item>
           {user ? (
+             <a href="/api/logout">
             <Menu.Item
               name='logout'
               active={activeItem === 'logout'}
-              onClick={handleItemClick}
-            />
+            /></a>
           ) : (
-            <Menu.Item
+           <a href="/auth/google"><Menu.Item
               name='login with google'
               active={activeItem === 'login'}
-              // onClick={()=> dispatch(actions.logout())}
-            />
+              
+            /></a>
           )}
         </Menu.Menu>
       </Menu>
